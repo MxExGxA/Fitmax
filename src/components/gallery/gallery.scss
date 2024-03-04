@@ -1,0 +1,110 @@
+@import "../../app.scss";
+
+.gallery-container {
+  height: 200vh;
+  background-color: var(--main-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    background-color: var(--main-dark);
+    color: var(--main-yellow);
+    font-family: roboto;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 20px 40px;
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
+
+    @include for-mobile {
+      font-size: 40px;
+    }
+  }
+
+  .wrapper {
+    width: 80%;
+    height: 100%;
+
+    .hover-text {
+      top: 20px;
+      left: 20px;
+      position: fixed;
+      color: var(--main-yellow);
+      font-family: "rubik mono one";
+      z-index: 1100;
+      font-size: 30px;
+      pointer-events: none;
+      width: 500px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .grid {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+
+      @include for-desktop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: unset;
+      }
+      @include for-mobile {
+        grid-template-columns: 1fr;
+      }
+      div {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      @for $n from 1 through 7 {
+        div:nth-child(#{$n}) {
+          background-image: url("../../images/gallery/" + #{$n} + ".png");
+        }
+      }
+
+      div:nth-child(2) {
+        grid-area: 1/2/3/3;
+        @include for-desktop {
+          grid-area: unset;
+        }
+      }
+      div:nth-child(3) {
+        grid-area: 1/3;
+        @include for-desktop {
+          grid-area: unset;
+        }
+      }
+      div:nth-child(4) {
+        grid-area: 2/3;
+        @include for-desktop {
+          grid-area: unset;
+        }
+      }
+      div:nth-child(5) {
+        grid-area: 2/1;
+        @include for-desktop {
+          grid-area: unset;
+        }
+      }
+      div:nth-child(6) {
+        grid-area: 3/2/5/4;
+        @include for-desktop {
+          grid-area: unset;
+        }
+      }
+      div:nth-child(7) {
+        grid-area: 3/1/5;
+        @include for-desktop {
+          grid-area: unset;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import "../../app.scss";
+
+.contactus-container {
+  height: 100vh;
+  background-color: var(--main-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    background-color: var(--main-dark);
+    color: var(--main-yellow);
+    font-family: roboto;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 20px 40px;
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
+
+    @include for-mobile {
+      font-size: 40px;
+    }
+  }
+
+  .wrapper {
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      background-color: var(--main-dark);
+      padding: 20px;
+
+      @include for-desktop {
+        width: 100%;
+      }
+
+      @include for-mobile {
+        height: fit-content;
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        font-family: roboto;
+        font-size: 25px;
+        width: 100%;
+        border-bottom: 3px solid var(--main-yellow);
+        padding: 10px;
+        margin: 10px;
+        outline: none;
+        color: white;
+
+        @include for-mobile {
+          font-size: 20px;
+        }
+
+        &::placeholder {
+          color: white;
+          opacity: 0.7;
+        }
+      }
+
+      .message {
+        font-family: roboto;
+        font-size: 25px;
+        background-color: transparent;
+        border: 3px solid var(--main-yellow);
+        resize: none;
+        outline: none;
+        width: 100%;
+        margin: 40px 0;
+        padding: 10px;
+        color: white;
+
+        @include for-mobile {
+          font-size: 20px;
+        }
+        &::placeholder {
+          color: white;
+          opacity: 0.7;
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: 30px;
+        font-family: roboto;
+        font-weight: 500;
+        color: var(--main-dark);
+        background-color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+
+        @include for-mobile {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .right {
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+      background-image: url("../../images/contactForm.png");
+      background-position: center;
+      background-size: cover;
+
+      @include for-desktop {
+        display: none;
+        width: unset;
+      }
+    }
+  }
+}

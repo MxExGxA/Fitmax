@@ -1,0 +1,133 @@
+@import "../../app.scss";
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  color: var(--main-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1005;
+  transition: background-color 0.5s;
+  height: 65px;
+
+  .wrapper {
+    display: flex;
+    width: 80%;
+    border-top: 1px solid var(--main-dark);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+    @include for-mobile {
+      .logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 80%;
+        }
+      }
+    }
+
+    .menu {
+      @include for-tablet {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        font-family: roboto;
+
+        li {
+          margin-left: 20px;
+          font-size: 18px;
+          white-space: nowrap;
+          position: relative;
+
+          a {
+            color: var(--main-dark);
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .small-menu {
+      height: 100%;
+      display: none;
+
+      @include for-tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-menu {
+        width: fit-content;
+        height: 80%;
+        display: none;
+        cursor: pointer;
+        z-index: 1000;
+
+        @include for-tablet {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        span {
+          background-color: var(--main-dark);
+          height: 5px;
+          width: 35px;
+          display: block;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-yellow);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      list-style-type: none;
+      font-family: roboto;
+      text-align: center;
+      font-size: 60px;
+      font-weight: 600;
+
+      @include for-mobile {
+        font-size: 50px;
+      }
+
+      a {
+        color: var(--main-dark);
+      }
+
+      li {
+        padding: 20px 30px;
+      }
+    }
+  }
+}
+
+.scrolled-color {
+  background-color: rgba(242, 197, 20, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.scrolled-border {
+  border: none !important;
+}

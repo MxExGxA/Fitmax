@@ -1,0 +1,26 @@
+.phone-container {
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+
+    .phone {
+      display: flex;
+      padding: 15px 0;
+      color: var(--main-dark);
+
+      .icon {
+        transform: rotateZ(90deg);
+      }
+
+      .number {
+        font-family: roboto;
+        margin-left: 5px;
+        font-weight: 500;
+      }
+    }
+  }
+}

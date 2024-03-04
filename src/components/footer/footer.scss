@@ -1,0 +1,51 @@
+@import "../../app.scss";
+
+.footer-container {
+  background-color: var(--main-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    width: 80%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div {
+      width: 300px;
+      font-family: roboto;
+      font-size: 25px;
+      padding: 0 20px;
+      font-weight: bold;
+      padding: 40px 0;
+
+      ul {
+        list-style-type: none;
+        margin-top: 20px;
+      }
+      li {
+        font-weight: 300;
+        font-size: 20px;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+
+    .slogan {
+      font-family: "rubik mono one";
+      font-size: 30px;
+      font-weight: 400;
+      border-right: 1px solid white;
+
+      @include for-mobile {
+        border-right: unset;
+        font-size: 25px;
+      }
+    }
+  }
+}
