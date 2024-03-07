@@ -75,6 +75,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <p>Copyright © 2024 Fitmax | Crafted by Elsayed Elghazy</p>
     </div>
   );
 };

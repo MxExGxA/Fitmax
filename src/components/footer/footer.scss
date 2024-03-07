@@ -3,6 +3,7 @@
 .footer-container {
   background-color: var(--main-dark);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -46,6 +47,18 @@
         border-right: unset;
         font-size: 25px;
       }
+    }
+  }
+
+  p {
+    font-family: roboto;
+    color: white;
+    position: absolute;
+    padding-bottom: 20px;
+    bottom: 0;
+
+    @include for-mobile {
+      font-size: 14px;
     }
   }
 }
