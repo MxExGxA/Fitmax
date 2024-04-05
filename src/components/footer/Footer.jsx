@@ -2,7 +2,7 @@ import { useLenis } from "@studio-freight/react-lenis";
 import "./footer.scss";
 
 const Footer = () => {
-  const lenis = useLenis(({ scroll }) => {});
+  const lenis = useLenis(() => {});
 
   const home = () => {
     lenis.scrollTo("#home");
@@ -26,16 +26,40 @@ const Footer = () => {
           Follow Us
           <ul>
             <li>
-              <a href="#">Facebook</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/elsayed.elghazy.5"
+              >
+                Facebook
+              </a>
             </li>
             <li>
-              <a href="#">Twitter</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://twitter.com/MxExGxA11"
+              >
+                Twitter
+              </a>
             </li>
             <li>
-              <a href="#">Instagram</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/elsayed_elghazy/"
+              >
+                Instagram
+              </a>
             </li>
             <li>
-              <a href="#">LinkedIn</a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/elsayed-elghazy-1851011b1/"
+              >
+                LinkedIn
+              </a>
             </li>
           </ul>
         </div>
