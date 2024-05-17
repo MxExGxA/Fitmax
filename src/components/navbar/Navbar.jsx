@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./navbar.scss";
 import { useLenis } from "@studio-freight/react-lenis";
 import { motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 
 const Navbar = () => {
   const [toggleScroll, setToggleScroll] = useState(false);
@@ -59,6 +60,7 @@ const Navbar = () => {
 
   return (
     <div className={`nav-container ${toggleScroll && "scrolled-color"}`}>
+      <Analytics />
       <div className={`wrapper ${toggleScroll && "scrolled-border"}`}>
         <div className="logo">
           <img src="fitmax.png" alt="logo" />
